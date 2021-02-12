@@ -1,0 +1,8 @@
+# filter rules
++ /Laravel/laradock/nginx/sites/**
+- */node_modules/**
+- */wp-admin/**
+- */wp-includes/**
+- */vendor/**
+- */laradock/**
+- */.git/**

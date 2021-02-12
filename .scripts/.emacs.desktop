@@ -1,0 +1,79 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Dec 29 17:27:35 2018
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23591 44679 787125 648000) (desktop . "208") "steve@steve-All-Series" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-bold-normal-normal-*-16-*-*-*-m-0-iso10646-1") (font-parameter) (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "gray80") (background-color . "#181a26") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 13) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "green") (environment) (sticky) (frameset--id . "AB51-5578-A7BC-2C87") (frameset--mini t . t) (frameset--text-pixel-width . 607) (frameset--text-pixel-height . 934) (height . 49) (width . 60) (modeline . t) (unsplittable) (left . 640) (top . 48) (icon-name) (display . ":0") (explicit-name)) ((min-height . 8) (min-width . 10) (min-height-ignore . 6) (min-width-ignore . 6) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 152) (min-pixel-width . 100) (min-pixel-height-ignore . 114) (min-pixel-width-ignore . 60) (min-pixel-height-safe . 38) (min-pixel-width-safe . 20)) vc (pixel-width . 636) (pixel-height . 915) (total-width . 64) (total-height . 48) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 636) (pixel-height . 459) (total-width . 64) (total-height . 24) (normal-height . 0.5) (normal-width . 1.0) (buffer "rclonev.sh" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 1) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 319) (start . 1))) (leaf (last . t) (pixel-width . 636) (pixel-height . 456) (total-width . 64) (total-height . 24) (normal-height . 0.5) (normal-width . 1.0) (buffer "filter-file.txt" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 1) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 89) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.scripts/" "~/.scripts/filter-file.txt" "~/.scripts/rclonev.sh" "~/.scripts/include-file.txt" "/home/steve/.scripts/rclone.sh"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/steve/.scripts/filter-file.txt"
+  "filter-file.txt"
+  'text-mode
+  '(linum-mode yas-minor-mode flycheck-mode company-mode)
+  89
+  '(22 nil)
+  nil
+  nil
+  '((buffer-display-time 23591 44677 26126 339000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (59 47 32 21 23 22 21 22 22 21 22 1 19 22 22 89))))
+
+(desktop-create-buffer 208
+  "/home/steve/.scripts/rclonev.sh"
+  "rclonev.sh"
+  'sh-mode
+  '(linum-mode auto-complete-mode yas-minor-mode flycheck-mode company-mode)
+  319
+  '(226 nil)
+  nil
+  nil
+  '((buffer-display-time 23591 44677 26125 349000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (226 226 226 235 226 236 226 322 319))))
+
+(desktop-create-buffer 208
+  "/home/steve/.scripts/homeclone.sh"
+  "homeclone.sh"
+  'sh-mode
+  '(linum-mode auto-complete-mode yas-minor-mode flycheck-mode company-mode)
+  85
+  '(85 nil)
+  nil
+  nil
+  '((buffer-display-time 23591 43062 503591 916000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (97 58 85 85 85 97 85 85 85 40 85 85 85 1 1 13))))
+
+(desktop-create-buffer 208
+  "/home/steve/.scripts/include-file.txt"
+  "include-file.txt"
+  'text-mode
+  '(linum-mode yas-minor-mode flycheck-mode company-mode)
+  3
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 23591 42988 565458 127000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/steve/.scripts/rclone.sh"
+  "rclone.sh"
+  'sh-mode
+  '(linum-mode auto-complete-mode yas-minor-mode flycheck-mode company-mode)
+  62
+  '(46 nil)
+  nil
+  nil
+  '((buffer-display-time 23591 42220 835987 598000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (46))))
+

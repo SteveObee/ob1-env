@@ -17,8 +17,10 @@ alias dropon='ssh root@104.248.165.126'
 
 alias pmn="/home/steve/Postman/Postman"
 alias dup="docker-compose up"
+alias dud="docker-compose down"
 alias tv="tv.sh"
 
 alias newses="tmux new-session -d -s new"
 
 alias vi="nvim"
+alias don='docker exec -it --user obeedock obeedock_wspace_1 /bin/bash'

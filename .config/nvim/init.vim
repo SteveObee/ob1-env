@@ -1,4 +1,17 @@
 " Handle Plugins
+let g:coc_global_extensions = [
+\ 'coc-phpls',
+\ 'coc-css',
+\ 'coc-emmet',
+\ 'coc-eslint',
+\ 'coc-html',
+\ 'coc-json',
+\ 'coc-pairs',
+\ 'coc-prettier',
+\ 'coc-sh',
+\ 'coc-snippets',
+\ 'coc-tsserver'
+\ ]
 
 call plug#begin(stdpath('data') . '/plugged')
 	Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }

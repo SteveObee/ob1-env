@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/steve/Projects/Php/laradock &&
+docker-compose exec --user=laradock workspace bash &&
+PS1='\[\033[1;33m\]/\W >\[\033[0m\] ';

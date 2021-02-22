@@ -1,0 +1,15 @@
+# filter rules
++ /.i3/**
++ /.fonts/**
++ /.scripts/**
++ /.ssh/id_**
++ /Homestead/**
++ /.config/Code/User/**
+- /*/**
+- .xsession-errors
+- .xorg.log
++ .*
++ notes.txt
+# exclude everything else
+- *
+

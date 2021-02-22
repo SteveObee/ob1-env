@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/steve/Projects/Php/laradock/laradock &&
+docker-compose up nginx postgres;

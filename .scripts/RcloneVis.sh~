@@ -1,0 +1,6 @@
+#!/bin/bash
+kill $(ps aux | grep '[r]clone' | awk '{print $2}');
+service cron stop;
+xfce4-terminal -e 'bash -c "cd /home/steve/Desktop/Safe/Scripts;./rclonev.sh; bash"' -T "G Drive Backup";
+service cron start;
+

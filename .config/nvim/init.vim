@@ -35,6 +35,8 @@ call plug#begin(stdpath('data') . '/plugged')
         Plug 'tpope/vim-unimpaired'
         Plug 'tpope/vim-repeat'
         Plug 'ryanoasis/vim-devicons'
+        Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+        Plug 'digitaltoad/vim-pug'
 call plug#end()
 
 scriptencoding utf-8
@@ -98,7 +100,7 @@ set mouse=a
 
 " === General Mappings === "
 
-" Mappins for jump and change lists
+" Mappings for jump and change lists
 nnoremap <leader>jl :ju<CR>
 nnoremap <leader>jc :changes<CR>
 
@@ -115,19 +117,15 @@ nnoremap <F12> :w<CR>
 " Remove highlighting
 nnoremap <leader>xh :noh<CR>
 
-" === Clipboard === "
-let g:clipboard = {
-  \   'name': 'xclip-xfce4-clipman',
-  \   'copy': {
-  \      '+': 'xclip -selection clipboard',
-  \      '*': 'xclip -selection clipboard',
-  \    },
-  \   'paste': {
-  \      '+': 'xclip -selection clipboard -o',
-  \      '*': 'xclip -selection clipboard -o',
-  \   },
-  \   'cache_enabled': 1,
-  \ }
+" Toggle wrapping, spelling and linebreak
+nnoremap <leader>ww :call Wrap()<CR>
+
+function Wrap()
+  :set wrap!
+  :set linebreak!
+  :setlocal spell!
+endfunction
+
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
@@ -407,6 +405,17 @@ let g:php_cs_fixer_verbose = 0                    " Return the output of command
 " === prettier === "
 command! -nargs=0 Prettier :CocCommand prettier.formatFile:
 
+" === Mardown Preview === "
+let g:mkdp_open_to_the_world = 1
+let g:mkdp_open_ip = '172.22.0.5' " change to you vps or vm ip
+let g:mkdp_port = 8894
+function! g:EchoUrl(url)
+    :echo a:url
+endfunction
+let g:mkdp_browserfunc = 'g:EchoUrl'
+
+nmap <leader>mp <Plug>MarkdownPreviewToggle
+
 " ============================================================================ "
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
@@ -504,7 +513,7 @@ nnoremap <silent><nowait> <leader>cj  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <leader>cp  :<C-u>CocListResume<CR>
-
+          
 " === coc-snippets === "
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :

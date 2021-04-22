@@ -250,8 +250,6 @@ exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/conf
 # exec_always google-chrome
 
 bindsym Mod4+n exec --no-startup-id code
-bindsym Mod4+Ctrl+n exec --no-startup-id emacs
-bindsym Mod4+Shift+n exec --no-startup-id sudo emacs
 bindsym Mod4+m exec --no-startup-id firefox-developer-edition
 bindsym Mod4+Ctrl+m exec --no-startup-id epdfview 
 bindsym Mod4+comma exec --no-startup-id spacefm
@@ -264,9 +262,18 @@ focus_on_window_activation focus
 # bindsym Mod4+Shift+q move container to workspace next
 # bindsym Mod4+Shift+p move container to workspace prev
 
-bindsym Mod4+Shift+Pause exec systemctl suspend
-bindsym Mod4+Shift+Delete exec ~/.scripts/shutdown.sh 
-bindsym Mod4+Shift+F5 exec ~/.scripts/reboot.sh
+# System commands
+bindsym Mod4+Escape exec systemctl suspend
+bindsym Mod4+Shift+Escape exec systemctl hibernate
+bindsym Mod4+Delete exec ~/.scripts/shutdown.sh 
+bindsym Mod4+F5 exec ~/.scripts/reboot.sh
+
+# ob1 commands
+bindsym Mod4+bracketleft exec xdotool search "Navigator" key Left;
+bindsym Mod4+bracketright exec xdotool search "Navigator" key Right;
+bindsym Mod4+Shift+bracketleft exec xdotool search "Navigator" key Down;
+bindsym Mod4+Shift+bracketright exec xdotool search "Navigator" key Up;
+bindsym Mod4+numbersign exec xdotool search "Navigator" key space;
 
 bindsym Mod4+Ctrl+$left       resize shrink width 10 px or 10 ppt
 bindsym Mod4+Ctrl+$down       resize grow height 10 px or 10 ppt

@@ -1,10 +1,9 @@
 # filter rules
-+ /.i3/**
-+ /.fonts/**
 + /.scripts/**
 + /.ssh/id_**
 + /Documents/**
-+ /.config/Code/User/**
++ /.config/i3/**
++ /.config/nvim/**
 - /*/**
 - .xsession-errors
 - .xorg.log

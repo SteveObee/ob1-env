@@ -4,5 +4,6 @@
 - */wp-admin/**
 - */wp-includes/**
 - */vendor/**
-- */laradock/**
+- */obeedock/**
 - */.git/**
+- */findyouractivity/storage/**

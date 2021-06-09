@@ -24,3 +24,6 @@ alias newses="tmux new-session -d -s new"
 
 alias vi="nvim"
 alias don='docker exec -it --user obeedock obeedock_wspace_1 /bin/bash'
+
+alias vt="vagrant_test"
+alias art="php_artisan"

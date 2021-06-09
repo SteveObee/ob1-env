@@ -4,6 +4,7 @@ let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-emmet',
 \ 'coc-eslint',
+\ 'coc-vetur',
 \ 'coc-html',
 \ 'coc-json',
 \ 'coc-pairs',
@@ -37,6 +38,7 @@ call plug#begin(stdpath('data') . '/plugged')
         Plug 'ryanoasis/vim-devicons'
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
         Plug 'digitaltoad/vim-pug'
+        Plug 'adoy/vim-php-refactoring-toolbox'
 call plug#end()
 
 scriptencoding utf-8
@@ -107,7 +109,7 @@ nnoremap <leader>jc :changes<CR>
 " Cycle Buffers
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprev<CR>
-nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bd :bd!<CR>
 nnoremap <Leader>bl :ls<CR>:b<Space>
 
 " One shot remap
@@ -126,6 +128,12 @@ function Wrap()
   :setlocal spell!
 endfunction
 
+" post save
+
+function VagrantTest(AppDir)
+  let path = "cd " . a:AppDir . " ls"
+  :! cd /home/steve/Homestead && vagrant ssh -c path
+endfunction  
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
@@ -531,7 +539,7 @@ let g:coc_snippet_next = '<tab>'
 " === Nerdtree shorcuts === "
 "  <leader>n - Toggle NERDTree on/off
 "  <leader>f - Opens current file location in NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
+nmap - :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 
 " Quick window switching
